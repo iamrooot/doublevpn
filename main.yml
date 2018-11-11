@@ -23,8 +23,21 @@
       state: present
       reload: yes
  
-  - name: Enable IPv4 forwarding continued
-    command: echo 1 > /proc/sys/net/ipv4/ip_forward.
+  - name: Enable IPv4 traffic forwarding now
+    command: echo 1 > /proc/sys/net/ipv4/ip_forward
+    
+  - name: Disable ICMP
+    sysctl:
+      name: net.ipv4.icmp_echo_ignore_all
+      value: 1
+      sysctl_set: yes
+      state: present
+      reload: yes
+    when: not next_srv
+ 
+  - name: Disable ICMP now
+    command: echo 1 > /proc/sys/net/ipv4/icmp_echo_ignore_all
+    when: not next_srv
 
   - name: Add table
     lineinfile: dest=/etc/iproute2/rt_tables line="1 mid"
@@ -72,11 +85,3 @@
        state: restarted
     ignore_errors: yes
     when: next_srv is string
-
-
- 
-
-
-
-
-
