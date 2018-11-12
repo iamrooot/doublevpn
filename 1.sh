@@ -46,11 +46,11 @@ sudo docker run \
     -v /var/lib/openvpn:/var/lib/pritunl \
       jippi/pritunl
 
-echo " If you want to use wireguard, copy this text"
+echo "IF YOU WANT TO USE WIREGUARD, COPY THIS TEXT"
 echo "#####################################################################################################################"
 echo "$CNF"
 echo "#####################################################################################################################"
-echo "If you want to use OpenVPN"
+echo "IF YOU WANT TO USE OPENVPN"
 echo "open in web browser    :  https://$MYIP"
 echo "Enter login/password   :  pritunl/pritunl"
 
