@@ -28,18 +28,18 @@
 
     - name: srv_numbers
       private: False
-      prompt: -e "\e[36mEnter the number of servers\e[0m"
+      prompt: "Enter the number of servers"
 
   tasks:
 
   - name: srv1 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №1\e[0m"
+      prompt: "Enter IP address of the server №1"
     register: ip1
     when: srv_numbers|int >= 1
   - name: srv1 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №1\e[0m"
+      prompt: "Enter the password from the server №1"
     register: pas1
     when: srv_numbers|int >= 1
   - name: srv1
@@ -50,12 +50,12 @@
 
   - name: srv2 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №2\e[0m"
+      prompt: "Enter IP address of the server №2"
     register: ip2
     when: srv_numbers|int >= 2
   - name: srv2 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №2\e[0m"
+      prompt: "Enter the password from the server №2"
     register: pas2
     when: srv_numbers|int >= 2
   - name: srv2
@@ -66,12 +66,12 @@
 
   - name: srv3 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №3\e[0m"
+      prompt: "Enter IP address of the server №3"
     register: ip3
     when: srv_numbers|int >= 3
   - name: srv3 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №3\e[0m"
+      prompt: "Enter the password from the server №3"
     register: pas3
     when: srv_numbers|int >= 3
   - name: srv3
@@ -82,12 +82,12 @@
 
   - name: srv4 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №4\e[0m"
+      prompt: "Enter IP address of the server №4"
     register: ip4
     when: srv_numbers|int >= 4
   - name: srv4 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №4\e[0m"
+      prompt: "Enter the password from the server №4"
     register: pas4
     when: srv_numbers|int >= 4
   - name: srv4
@@ -98,12 +98,12 @@
 
   - name: srv5 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №5\e[0m"
+      prompt: "Enter IP address of the server №5"
     register: ip5
     when: srv_numbers|int >= 5
   - name: srv5 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №5\e[0m"
+      prompt: "Enter the password from the server №5"
     register: pas5
     when: srv_numbers|int >= 5
   - name: srv5
@@ -114,12 +114,12 @@
 
   - name: srv6 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №6\e[0m"
+      prompt: "Enter IP address of the server №6"
     register: ip6
     when: srv_numbers|int >= 6
   - name: srv6 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №6\e[0m"
+      prompt: "Enter the password from the server №6"
     register: pas6
     when: srv_numbers|int >= 6
   - name: srv6
@@ -130,12 +130,12 @@
 
   - name: srv7 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №7\e[0m"
+      prompt: "Enter IP address of the server №7"
     register: ip7
     when: srv_numbers|int >= 7
   - name: srv7pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №7\e[0m"
+      prompt: "Enter the password from the server №7"
     register: pas7
     when: srv_numbers|int >= 7
   - name: srv7
@@ -146,12 +146,12 @@
 
   - name: srv8 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №8\e[0m"
+      prompt: "Enter IP address of the server №8"
     register: ip8
     when: srv_numbers|int >= 8
   - name: srv8 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №8\e[0m"
+      prompt: "Enter the password from the server №8"
     register: pas8
     when: srv_numbers|int >= 8
   - name: srv8
@@ -162,12 +162,12 @@
 
   - name: srv9 ip
     pause:
-      prompt: -e "\e[36mEnter IP address of the server №9\e[0m"
+      prompt: "Enter IP address of the server №9"
     register: ip9
     when: srv_numbers|int >= 9
   - name: srv9 pas
     pause:
-      prompt: -e "\e[36mEnter the password from the server №9\e[0m"
+      prompt: "Enter the password from the server №9"
     register: pas9
     when: srv_numbers|int >= 9
   - name: srv9
@@ -258,6 +258,3 @@
       owner: root
       group: root
       mode: 0600
-
-
-
