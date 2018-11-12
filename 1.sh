@@ -51,7 +51,7 @@ echo "##########################################################################
 echo "$CNF"
 echo "#####################################################################################################################"
 echo -e "\e[1;35mIF YOU WANT TO USE OPENVPN\e[0m"
-echo "open in web browser    :  https://$MYIP"
+echo "Open in web browser    :  https://$MYIP"
 echo "Enter login/password   :  pritunl/pritunl"
 
 rm -R /root/doublevpn &> /dev/null
